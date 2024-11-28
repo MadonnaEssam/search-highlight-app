@@ -1,0 +1,135 @@
+@import "@/assets/style/_variables.scss";
+
+.search-page {
+    padding: 20px;
+
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-underline {
+        text-decoration: underline;
+    }
+
+    .search-box {
+        position: relative;
+        width: 50%;
+        margin-right: 1rem;
+
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 16px;
+            top: 75px;
+            border: none;
+            border-radius: 50%;
+            background: transparent;
+            color: $secondary-color;
+            font-size: 1.2em;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .post {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .highlight {
+            background-color: $highlight-color;
+        }
+    }
+
+    .author-info {
+        font-size: 0.9em;
+        width: 25%;
+        padding: 10px;
+        border: 3px solid $border-color;
+        border-radius: 5px;
+        color: #555;
+
+        .follow-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .twitter-button {
+            background-color: #1DA1F2;
+            color: white;
+            padding: 5px;
+            margin-right: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #0d94d2;
+            }
+        }
+
+        .follower-count {
+            background-color: white;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 13px;
+            color: #555;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                border-style: solid;
+                border-color: #d1d1d1;
+                border-width: 0px 0px 1px 1px;
+                width: 7px;
+                height: 7px;
+                top: 10px;
+                left: -4px;
+                background: inherit;
+                transform: rotate(45deg);
+
+            }
+        }
+    }
+
+    .result-count {
+        font-weight: bold;
+    }
+
+    .no-results {
+        color: $primary-color;
+        font-style: italic;
+    }
+}
